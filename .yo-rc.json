@@ -1,0 +1,11 @@
+{
+  "generator-mendix": {
+    "promptValues": {
+      "copyright": "Mendix 2019",
+      "license": "Apache 2",
+      "author": "Samuel Dorilas",
+      "boilerplate": "empty",
+      "widgetoptions": []
+    }
+  }
+}
