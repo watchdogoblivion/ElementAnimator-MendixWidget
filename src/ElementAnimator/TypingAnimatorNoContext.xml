@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="ElementAnimator.widget.TypingAnimatorNoContext" needsEntityContext="false" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>TypingAnimator No Context</name>
+    <description>The description of this widget.</description>
+
+    <icon />
+
+    <properties>
+        <!-- Typed Static Category-->
+        <property key="typedQuery_" type="string" required="false">
+            <caption>Typed Query</caption>
+            <category>Typed Static</category>
+            <description>Css class selector. Use select element you wish to be typed. ex: class</description>
+        </property>
+        <property key="enabled_" type="boolean" defaultValue="false" required="true">
+            <caption>Enabled/Disabled</caption>
+            <category>Typed Static</category>
+            <description>Whether typing is enable or disabled</description>
+        </property>
+        <property key="staticTexts_" type="object" isList="true" required="false">
+            <caption>Texts</caption>
+            <category>Typed Static</category>
+            <description>Each text to be typed before cursor backspace. Use html break tag to insert a line break. Use the ^ symbol followed by a number in milliseconds to pause the typing for that amount of time. Ex: ^750 to pause for 750 milliseconds</description>
+            <properties>
+                <property key="staticText_" type="string" multiline="true" required="false">
+                    <caption>Text Static</caption>
+                    <category>Typed</category>
+                    <description>Text to be typed. Use html break tag to insert a line break. Use the ^ symbol followed by a number in milliseconds to pause the typing for that amount of time. Ex: ^750 to pause for 750 milliseconds</description>
+                </property>
+            </properties>
+        </property>
+        <property key="typeSpeed_" type="integer" defaultValue="0" required="true">
+            <caption>Type Speed</caption>
+            <category>Typed Static</category>
+            <description>Type speed in milliseconds</description>
+        </property>
+        <property key="startDelay_" type="integer" defaultValue="0" required="true">
+            <caption>Start Delay</caption>
+            <category>Typed Static</category>
+            <description>Delay time before typing starts in milliseconds</description>
+        </property>
+        <property key="backSpeed_" type="integer" defaultValue="0" required="true">
+            <caption>Backspeed</caption>
+            <category>Typed Static</category>
+            <description>Backspacing speed in milliseconds</description>
+        </property>
+        <property key="backDelay_" type="integer" defaultValue="0" required="true">
+            <caption>Back Delay</caption>
+            <category>Typed Static</category>
+            <description>BackDelay time before backspacing in milliseconds</description>
+        </property>
+        <property key="fadeOut_" type="boolean" defaultValue="false" required="true">
+            <caption>Fade Out</caption>
+            <category>Typed Static</category>
+            <description>Fade out instead of backspace</description>
+        </property>
+        <property key="fadeOutDelay_" type="integer" defaultValue="0" required="true">
+            <caption>Fade out delay</caption>
+            <category>Typed Static</category>
+            <description>Fade out delay in milliseconds</description>
+        </property>
+         <property key="loopCount_" type="integer" defaultValue="0" required="true">
+            <caption>Loop Count</caption>
+            <category>Typed Static</category>
+            <description>Amount of loops</description>
+        </property>
+        <property key="cursorChar_" type="string" required="false">
+            <caption>Cursor Character</caption>
+            <category>Typed Static</category>
+            <description>Character for cursor</description>
+        </property>
+        <property key="showCursor_" type="boolean" defaultValue="false" required="true">
+            <caption>Show Cursor</caption>
+            <category>Typed Static</category>
+            <description>Show Cursor</description>
+        </property>
+
+        <!-- Controls -->
+        <property key="buttonCreateTyped_" type="string" required="false">
+            <caption>Button Initiate typed</caption>
+            <category>Custom Controls</category>
+            <description>When a button is clicked, create typed object. This field is the button class.</description>
+        </property>
+        <property key="buttonDestroy_" type="string" required="false">
+            <caption>Button Destroy</caption>
+            <category>Custom Controls</category>
+            <description>Button (class) to destroy this instance of Typed</description>
+        </property>
+        <property key="buttonToggle_" type="string" required="false">
+            <caption>Button Toggle</caption>
+            <category>Custom Controls</category>
+            <description>Button (class) to toggle the Start and Stop of the typing</description>
+        </property>
+        <property key="buttonStart_" type="string" required="false">
+            <caption>Button Start</caption>
+            <category>Custom Controls</category>
+            <description>Button (class) to start typing / backspacing after being stopped</description>
+        </property>
+        <property key="buttonStop_" type="string" required="false">
+            <caption>Button Stop</caption>
+            <category>Custom Controls</category>
+            <description>Button (class) to stop typing / backspacing and enable cursor blinking</description>
+        </property>
+        <property key="buttonReset_" type="string" required="false">
+            <caption>Button Reset</caption>
+            <category>Custom Controls</category>
+            <description>Button (class) to reset Typed and optionally restarts</description>
+        </property>
+
+        <!-- Event Handlers -->
+        <property key="microflowOnComplete_" type="microflow" required="false">
+            <caption>OnComplete</caption>
+            <category>Events</category>
+            <description>Trigger a microflow when typing is complete</description>
+            <returnType type="Void" />
+        </property>
+        <property key="microflowonDestroy_" type="microflow" required="false">
+            <caption>OnDestroy</caption>
+            <category>Events</category>
+            <description>Trigger a microflow when when typed object is changed which detroys the previous typed object, or on explicit destroy</description>
+            <returnType type="Void" />
+        </property>
+        <property key="microflowPreStringTyped_" type="microflow" required="false">
+            <caption>Pre String Typed</caption>
+            <category>Events</category>
+            <description>Trigger a microflow before each string is typed</description>
+            <returnType type="Void" />
+        </property>
+        <property key="microflowOnStringTyped_" type="microflow" required="false">
+            <caption>On String Typed</caption>
+            <category>Events</category>
+            <description>Trigger a microflow after each string is typed</description>
+            <returnType type="Void" />
+        </property>
+        <property key="microflowOnTypingResumed_" type="microflow" required="false">
+            <caption>On Typing Resumed</caption>
+            <category>Events</category>
+            <description>Trigger a microflow after typing has been started after being stopped</description>
+            <returnType type="Void" />
+        </property>
+        <property key="microflowOnReset_" type="microflow" required="false">
+            <caption>On Reset</caption>
+            <category>Events</category>
+            <description>Trigger a microflow after reset</description>
+            <returnType type="Void" />
+        </property>
+        <property key="microflowOnStop_" type="microflow" required="false">
+            <caption>On Stop</caption>
+            <category>Events</category>
+            <description>Trigger a microflow after stop</description>
+            <returnType type="Void" />
+        </property>
+        <property key="microflowOnStart_" type="microflow" required="false">
+            <caption>On Start</caption>
+            <category>Events</category>
+            <description>Trigger a microflow after start</description>
+            <returnType type="Void" />
+        </property>
+
+    </properties>
+    
+</widget>

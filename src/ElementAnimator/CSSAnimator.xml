@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="ElementAnimator.widget.CSSAnimator" needsEntityContext="false" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>CSSAnimator</name>
+    <description>The description of this widget.</description>
+
+    <icon />
+
+    <properties>
+    <!-- Animate.css -->
+        <property key="cssQuery_" type="string" required="false">
+            <caption>CSS Query</caption>
+            <category>Animations</category>
+            <description>Css class selector. Use select element you wish to animate. ex: class</description>
+        </property>
+        <property key="cssEnum_" type="enumeration" defaultValue="none">
+            <caption>Animation Effects</caption>
+            <category>Animations</category>
+            <description>Effect animations</description>
+            <enumerationValues>
+                <enumerationValue key="none">none</enumerationValue>
+                <enumerationValue key="flash">Flash</enumerationValue>
+                <enumerationValue key="pulse">Pulse</enumerationValue>
+                <enumerationValue key="rubberBand">RubberBand</enumerationValue>
+                <enumerationValue key="shake">Shake</enumerationValue>
+                <enumerationValue key="headShake">Head Shake</enumerationValue>
+                <enumerationValue key="swing">Swing</enumerationValue>
+                <enumerationValue key="tada">Tada</enumerationValue>
+                <enumerationValue key="wobble">Wobble</enumerationValue>
+                <enumerationValue key="jello">Jello</enumerationValue>
+                <enumerationValue key="hinge">Hinge</enumerationValue>
+                <enumerationValue key="jackInTheBox">Jack In The Box</enumerationValue>
+                <enumerationValue key="heartBeat">HeartBeat</enumerationValue>
+                <enumerationValue key="bounce">Bounce</enumerationValue>
+                <enumerationValue key="bounceIn">Bounce In</enumerationValue>
+                <enumerationValue key="bounceInDown">Bounce In Down</enumerationValue>
+                <enumerationValue key="bounceInLeft">Bounce In Left</enumerationValue>
+                <enumerationValue key="bounceInRight">Bounce In Right</enumerationValue>
+                <enumerationValue key="bounceInUp">Bounce In Up</enumerationValue>
+                <enumerationValue key="bounceOut">Bounce Out</enumerationValue>
+                <enumerationValue key="bounceOutDown">Bounce Out Down</enumerationValue>
+                <enumerationValue key="bounceOutLeft">Bounce Out Left</enumerationValue>
+                <enumerationValue key="bounceOutRight">Bounce Out Right</enumerationValue>
+                <enumerationValue key="bounceOutUp">Bounce Out Up</enumerationValue>
+                <enumerationValue key="fadeIn">Fade In</enumerationValue>
+                <enumerationValue key="fadeInDown">Fade In Down</enumerationValue>
+                <enumerationValue key="fadeInDownBig">Fade In Down Big</enumerationValue>
+                <enumerationValue key="fadeInLeft">Fade In Left</enumerationValue>
+                <enumerationValue key="fadeInLeftBig">Fade In Left Big</enumerationValue>
+                <enumerationValue key="fadeInRight">Fade In Right</enumerationValue>
+                <enumerationValue key="fadeInRightBig">Fade In Right Big</enumerationValue>
+                <enumerationValue key="fadeInUp">Fade In Up</enumerationValue>
+                <enumerationValue key="fadeOut">Fade Out</enumerationValue>
+                <enumerationValue key="fadeOutDown">Fade Out Down</enumerationValue>
+                <enumerationValue key="fadeOutDownBig">Fade Out Down Big</enumerationValue>
+                <enumerationValue key="fadeOutLeft">Fade Out Left</enumerationValue>
+                <enumerationValue key="fadeOutLeftBig">Fade Out Left Big</enumerationValue>
+                <enumerationValue key="fadeOutRight">Fade Out Right</enumerationValue>
+                <enumerationValue key="fadeOutRightBig">Fade Out Right Big</enumerationValue>
+                <enumerationValue key="fadeOutUp">Fade Out Up</enumerationValue>
+                <enumerationValue key="fadeOutUpBig">Fade Out Up Big</enumerationValue>
+                <enumerationValue key="flipInX">Flip In X</enumerationValue>
+                <enumerationValue key="flipInY">Flip In Y</enumerationValue>
+                <enumerationValue key="flipOutX">Flip Out X</enumerationValue>
+                <enumerationValue key="flipOutY">Flip Out Y</enumerationValue>
+                <enumerationValue key="lightSpeedIn">Light Speed In</enumerationValue>
+                <enumerationValue key="lightSpeedOut">Light Speed Out</enumerationValue>
+                <enumerationValue key="rotateIn">Rotate In</enumerationValue>
+                <enumerationValue key="rotateInDownLeft">Rotate In Down Left</enumerationValue>
+                <enumerationValue key="rotateInDownRight">Rotate In Down Right</enumerationValue>
+                <enumerationValue key="rotateInUpLeft">Rotate In Up Left</enumerationValue>
+                <enumerationValue key="rotateInUpRight">Rotate In Up Right</enumerationValue>
+                <enumerationValue key="rotateOut">Rotate Out</enumerationValue>
+                <enumerationValue key="rotateOutDownLeft">Rotate Out Down Left</enumerationValue>
+                <enumerationValue key="rotateOutDownRight">Rotate Out Down Right</enumerationValue>
+                <enumerationValue key="rotateOutUpLeft">Rotate Out Up Left</enumerationValue>
+                <enumerationValue key="rotateOutUpRight">Rotate Out Up Right</enumerationValue>
+                <enumerationValue key="rollIn">Roll In</enumerationValue>
+                <enumerationValue key="rollOut">Roll Out</enumerationValue>
+                <enumerationValue key="slideInDown">Slide In Down</enumerationValue>
+                <enumerationValue key="slideInLeft">Slide In Left</enumerationValue>
+                <enumerationValue key="slideInRight">Slide In Right</enumerationValue>
+                <enumerationValue key="slideInUp">Slide In Up</enumerationValue>
+                <enumerationValue key="slideOutDown">Slide Out Down</enumerationValue>
+                <enumerationValue key="slideOutLeft">Slide Out Left</enumerationValue>
+                <enumerationValue key="slideOutRight">Slide Out Right</enumerationValue>
+                <enumerationValue key="slideOutUp">Slide Out Up</enumerationValue>
+                <enumerationValue key="zoomIn">Zoom In</enumerationValue>
+                <enumerationValue key="zoomInDown">Zoom In Down</enumerationValue>
+                <enumerationValue key="zoomInLeft">Zoom In Left</enumerationValue>
+                <enumerationValue key="zoomInRight">Zoom In Right</enumerationValue>
+                <enumerationValue key="zoomInUp">Zoom In Up</enumerationValue>
+                <enumerationValue key="zoomOut">Zoom Out</enumerationValue>
+                <enumerationValue key="zoomOutDown">Zoom Out Down</enumerationValue>
+                <enumerationValue key="zoomOutLeft">Zoom Out Left</enumerationValue>
+                <enumerationValue key="zoomOutRight">Zoom Out Right</enumerationValue>
+                <enumerationValue key="zoomOutUp">Zoom Out Up</enumerationValue>
+            </enumerationValues>
+        </property>
+        <property key="delay_" type="string" defaultValue="1" required="true">
+            <caption>Animation Delay</caption>
+            <category>Animations</category>
+            <description>Delay in seconds</description>
+        </property>
+        <property key="duration_" type="string" defaultValue="1"  required="true">
+            <caption>Animation Duration</caption>
+            <category>Animations</category>
+            <description>Duration in seconds</description>
+        </property>
+        <property key="iteration_" type="string" defaultValue="infinite" required="true" >
+            <caption>Animation Iteration</caption>
+            <category>Animations</category>
+            <description>Number of iterations as an integer, or type infinite for infinite iteration</description>
+        </property>
+
+        <!-- Event Handlers -->
+        <property key="microflowOnAnimationEnd_" type="microflow" required="false">
+            <caption>On Animation End MF</caption>
+            <category>Events</category>
+            <description>Trigger a microflow when animation ends</description>
+            <returnType type="Void" />
+        </property>
+        <property key="onAnimationEnd_" type="enumeration" defaultValue="none">
+            <caption>On Animation End Trigger</caption>
+            <category>Events</category>
+            <description>Remove the element, when the animation ends; Hide the element visibility (reserved space), when the animation ends; Hide the element display (no space), when the animation ends;</description>
+            <enumerationValues>
+                <enumerationValue key="none">none</enumerationValue>
+                <enumerationValue key="removeElementOnAnimationEnd">Remove Element</enumerationValue>
+                <enumerationValue key="hideVisibilityOnAnimationEnd">Hide Visibility</enumerationValue>
+                <enumerationValue key="hideDisplayOnAnimationEnd">Hide Display</enumerationValue>
+            </enumerationValues>
+        </property>
+        
+    </properties>
+    
+</widget>
+

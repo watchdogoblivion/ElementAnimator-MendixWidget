@@ -1,0 +1,20 @@
+Mar  1 05:58:36.714 - INFO - WebUI: Anonymous user 'Anonymous_5b0353d0-29b7-4df2-96f2-c105de690a92' created (Number of concurrent sessions: 25).
+Mar  1 06:02:43.097 - INFO - WebUI: Anonymous user 'Anonymous_36311805-c622-4ca2-b9a3-6f0842e01b87' created (Number of concurrent sessions: 26).
+Mar  1 06:03:19.480 - INFO - Connector: New login request from [Source-IP: 127.0.0.1, X-Forwarded-For: 46.226.50.229, User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64; Trident/7.0; rv:11.0) like Gecko]
+Mar  1 06:03:19.482 - INFO - WebUI: Login FAILED: unknown user 'TEST'.
+Mar  1 06:06:44.661 - INFO - Core: Removing session for user 'Anonymous_5e53236b-a168-4e67-80d1-1e162c901e2d'
+
+Mar  1 06:08:31.807 - INFO - WebUI: Anonymous user 'Anonymous_0c92808d-6e13-4285-9691-83fc944433f6' created (Number of concurrent sessions: 23).
+Mar  1 06:12:56.529 - INFO - Connector: New login request from [Source-IP: 127.0.0.1, X-Forwarded-For: 46.226.50.229, User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64; Trident/7.0; rv:11.0) like Gecko]
+
+Mar  1 06:28:27.518 - INFO - WebUI: Anonymous user 'Anonymous_03e3e4be-5c04-47f1-83a6-8c703db9d1b4' created (Number of concurrent sessions: 24).
+Mar  1 06:32:43.287 - INFO - WebUI: Anonymous user 'Anonymous_4f607992-c1f8-45e3-ac73-a3dd10600fb3' created (Number of concurrent sessions: 25).
+
+Mar  1 06:40:08.934 - INFO - Welzorg Logistics: WorkshopJobPickList voor 8473363 door null succesvol in 269 ms.
+Mar  1 06:42:54.877 - INFO - Connector: New login request from [Source-IP: 127.0.0.1, X-Forwarded-For: 46.226.50.229, User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64; Trident/7.0; rv:11.0) like Gecko]
+Mar  1 06:42:54.879 - INFO - WebUI: Login FAILED: unknown user 'TEST'.
+Mar  1 06:43:28.953 - INFO - WebUI: Anonymous user 'Anonymous_1645eb86-674d-4943-b22f-ae97bebe5013' created (Number of concurrent sessions: 26).
+Mar  1 06:47:52.538 - INFO - Connector: New login request from [Source-IP: 127.0.0.1, X-Forwarded-For: 46.226.50.229, User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64; Trident/7.0; rv:11.0) like Gecko]
+
+
+
