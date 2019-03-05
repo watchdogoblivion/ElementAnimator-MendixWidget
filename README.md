@@ -24,8 +24,8 @@ Mendix 7.22
 
 
 ## Usage
-![Gif of CssAnimator image](https://github.com/watchdogoblivion/ElementAnimator-MendixWidget/blob/master/assets/CSSAnimations.png)
-![Gif of CssAnimator image](https://github.com/watchdogoblivion/ElementAnimator-MendixWidget/blob/master/assets/CSSEvents.png)
+![CssAnimator image](https://github.com/watchdogoblivion/ElementAnimator-MendixWidget/blob/master/assets/CssAnimations.png)
+![CssAnimator image](https://github.com/watchdogoblivion/ElementAnimator-MendixWidget/blob/master/assets/CssEvents.png)
 
 # TypingAnimator Features
 
@@ -36,7 +36,7 @@ Mendix 7.22
 
 ## Sample
 
-![Gif of TypingAnimator Example](https://github.com/watchdogoblivion/ElementAnimator-MendixWidget/blob/master/assets/EX.gif)
+![Gif of TypingAnimator Example](https://github.com/watchdogoblivion/ElementAnimator-MendixWidget/blob/master/assets/Ex.gif)
 ![Gif of TypingAnimator Example](https://github.com/watchdogoblivion/ElementAnimator-MendixWidget/blob/master/assets/EX1.gif)
 
 
