@@ -20,12 +20,12 @@ Mendix 7.22
 * Trigger a microflow when the animation ends
 
 ## Sample
-![Gif of CssAnimator Example](https://github.com/watchdogoblivion/ElementAnimator-MendixWidget/tree/master/assets/EX2)
+![Gif of CssAnimator Example](https://github.com/watchdogoblivion/ElementAnimator-MendixWidget/tree/master/assets/EX2.gif)
 
 
 ## Usage
-![Gif of CssAnimator image](https://github.com/watchdogoblivion/ElementAnimator-MendixWidget/tree/master/assets/CSSAnimations)
-![Gif of CssAnimator image](https://github.com/watchdogoblivion/ElementAnimator-MendixWidget/tree/master/assets/CSSEvents)
+![Gif of CssAnimator image](https://github.com/watchdogoblivion/ElementAnimator-MendixWidget/tree/master/assets/CSSAnimations.png)
+![Gif of CssAnimator image](https://github.com/watchdogoblivion/ElementAnimator-MendixWidget/tree/master/assets/CSSEvents.png)
 
 # TypingAnimator Features
 
@@ -36,17 +36,17 @@ Mendix 7.22
 
 ## Sample
 
-![Gif of TypingAnimator Example](https://github.com/watchdogoblivion/ElementAnimator-MendixWidget/tree/master/assets/EX)
-![Gif of TypingAnimator Example](https://github.com/watchdogoblivion/ElementAnimator-MendixWidget/tree/master/assets/EX1)
+![Gif of TypingAnimator Example](https://github.com/watchdogoblivion/ElementAnimator-MendixWidget/tree/master/assets/EX.gif)
+![Gif of TypingAnimator Example](https://github.com/watchdogoblivion/ElementAnimator-MendixWidget/blob/master/assets/EX1.gif)
 
 
 ## usage
-![Gif of CssAnimator image](https://github.com/watchdogoblivion/ElementAnimator-MendixWidget/tree/master/assets/TypedStatic)
-![Gif of CssAnimator image](https://github.com/watchdogoblivion/ElementAnimator-MendixWidget/tree/master/assets/TypedDynamic)
-![Gif of CssAnimator image](https://github.com/watchdogoblivion/ElementAnimator-MendixWidget/tree/master/assets/TCustomControls)
-![Gif of CssAnimator image](https://github.com/watchdogoblivion/ElementAnimator-MendixWidget/tree/master/assets/TEvents)
+![Gif of CssAnimator image](https://github.com/watchdogoblivion/ElementAnimator-MendixWidget/tree/master/assets/TypedStatic.png)
+![Gif of CssAnimator image](https://github.com/watchdogoblivion/ElementAnimator-MendixWidget/tree/master/assets/TypedDynamic.png)
+![Gif of CssAnimator image](https://github.com/watchdogoblivion/ElementAnimator-MendixWidget/tree/master/assets/TCustomControls.png)
+![Gif of CssAnimator image](https://github.com/watchdogoblivion/ElementAnimator-MendixWidget/tree/master/assets/TEvents.png)
 
 ## Sample combined
 
-![Gif of TypingAnimator and CssAnimator Example](https://github.com/watchdogoblivion/ElementAnimator-MendixWidget/tree/master/assets/EX3)
+![Gif of TypingAnimator and CssAnimator Example](https://github.com/watchdogoblivion/ElementAnimator-MendixWidget/tree/master/assets/EX3.gif)
 
