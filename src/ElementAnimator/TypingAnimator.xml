@@ -33,7 +33,7 @@
         <property key="startDelay_" type="integer" defaultValue="0" required="true">
             <caption>Start Delay</caption>
             <category>Typed Static</category>
-            <description>Delay time before typing starts in milliseconds</description>
+            <description>Delay time before typing starts for each string in milliseconds</description>
         </property>
         <property key="backSpeed_" type="integer" defaultValue="0" required="true">
             <caption>Backspeed</caption>
@@ -115,7 +115,7 @@
         <property key="startDelayAttr_" type="attribute" required="false">
             <caption>Start Delay Override</caption>
             <category>Typed Dynamic</category>
-            <description>Delay time before typing starts in milliseconds</description>
+            <description>Delay time before typing starts for each string in milliseconds</description>
             <attributeTypes>
                 <attributeType name="Integer" />
             </attributeTypes>

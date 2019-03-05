@@ -50,3 +50,16 @@ Mendix 7.22
 
 ![Gif of TypingAnimator and CssAnimator Example](https://github.com/watchdogoblivion/ElementAnimator-MendixWidget/blob/master/assets/EX3.gif)
 
+## Notes and tips
+
+* The CSS animator cannot use display inline on the element that is targeted by animate css, but you can use it on its parent. Therefore the CSS animator is Better used on fresh elements instead of building blocks because building blocks come with pre-defined css properties.
+* You cannot apply css animation directly to the same element the typed object is using for typing. You can use it on its parent. This is because typed objects use display inine by default and css animations do not.
+* You cannot use multiple css animation effects on a single element. To use multiple effects, use element wrappng and add the effects to each layer.
+* Avoid using the **static** element selector in a listview, as all the widgets generated in the list view will point to the same element and cause distortion.
+* The css property text-align: center can affect the way certain css animations display their animations. 
+* Selecting an element for typing is optional. The widget automatically creates a default element and appends it to end of the parent.
+* Selecting the element for css animation is optional. It automatically takes the parent node.
+
+## Known Bugs
+
+* There is a bug with the dynamic texts that use the ** to split the texts. In an overview page, if you try to save an object in a popup too fast, it causes a glitch. Use a new page instead of popup to edit an object in order to avoid the bug.

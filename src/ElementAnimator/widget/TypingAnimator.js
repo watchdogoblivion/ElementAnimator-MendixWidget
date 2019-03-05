@@ -79,7 +79,6 @@ define([
         _dynamicArray: null,
         _staticArray: null,
         _defaultTag: "p",
-        _staticClass: "static-styles",
 
         constructor: function () {
             this._handles = [];
@@ -102,7 +101,12 @@ define([
             this.subscription();
 
             //set any dynamic attributes
-            this.setAttributes();
+            if(this._contextObj){
+                this.setAttributes();
+            }else{
+                this.uninitialize();
+            }
+            
             
             //set a button to create a typed object on click 
             if(this.buttonCreateTyped_ && this.buttonCreateTyped_.trim() !== ""){
@@ -125,9 +129,15 @@ define([
         //when an attrbte changes set the updated fields
         subscription: function(){
             this.subscribe({
-                guid: this._contextObj.getGuid(),
+                guid: this.checkExists(),
                 callback: function(guid) {
-                    this.setAttributes();
+
+                    if(this._contextObj){
+                        this.setAttributes();
+                    }else{
+                        this.uninitialize();
+                    }
+                    
                     if(this._typed){
                         this._typed.strings = this._staticArray;
                         this._typed.typeSpeed = this.typeSpeed_,
@@ -145,11 +155,19 @@ define([
             });
         },
 
+        checkExists: function(){
+            if(this._contextObj){
+                return this._contextObj.getGuid();
+            }else{
+                return null;
+            }
+        },
+
         setAttributes: function(){
 
             var text = this._contextObj.get(this.dynamicText_)
             if(!text || text.trim() == ""){
-                this._staticArray = [""];
+                this._staticArray = [];
                 for(var key in this.staticTexts_) {
                     if(this.staticTexts_.hasOwnProperty(key)) {
                         var value = this.staticTexts_[key];
@@ -215,8 +233,6 @@ define([
             //creates a default element for holding typed object for the widget even if the user specifies another element
             if(!this._typedElement){
                 this._typedElement = document.createElement(this._defaultTag);
-                //each created widget will have this class
-                this._typedElement.classList.add(this._staticClass);
                 this._typedElement.style.display = "inline";
                 document.getElementById(this.id).parentElement.appendChild(this._typedElement);
             }
@@ -316,7 +332,6 @@ define([
                 var elem = document.getElementsByClassName(this.typedQuery_)[0];
                 elem.style.display = "inline";
                 this._typed = new typedJs(elem, options);
-                this._typed.toggleBlinking(true);
             } else {
                 this._typed = new typedJs(this._typedElement, options);
             }
