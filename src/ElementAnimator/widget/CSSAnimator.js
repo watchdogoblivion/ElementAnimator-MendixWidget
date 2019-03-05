@@ -21,6 +21,7 @@ define([
 ], function (declare, _WidgetBase, dom, dojoDom, dojoProp, dojoGeometry, dojoClass, dojoStyle, dojoConstruct, dojoArray, lang, dojoText, dojoHtml, dojoEvent, _jQuery, animate) {
     "use strict";
 
+    //set css classes from animate.css 
     if(!window.Style){
         window.Style = {}; // global Object;
         Style.value = document.createElement('style');
@@ -72,6 +73,7 @@ define([
         cssFunction: function(){
 
             var cssElement;
+            //retreve element that will be animated. If it does not exist, then create one
             if(this.cssQuery_){
                 cssElement = document.getElementsByClassName(this.cssQuery_)[0];
             }else {
@@ -80,15 +82,18 @@ define([
                 cssElement.classList.add(this.cssQuery_);
             }
 
+            //add customization for animations
             Style.value.innerHTML += "." + this.cssQuery_ + 
             "{ animation-duration:" + this.duration_ + "s;" +
             "  animation-delay:" + this.delay_ + "s;" +
             "  animation-iteration-count:" + this.iteration_ + ";}"
 
+            //add animation
             if(this.cssEnum_){
                 cssElement.classList.add(this.cssEnum_);
             }
 
+            //add event handler for microflow call
             if(this.microflowOnAnimationEnd_){
                 cssElement.addEventListener('animationend', () => { 
                     this._execMf(this.microflowOnAnimationEnd_, () => {
@@ -97,6 +102,7 @@ define([
                 });
             }
 
+            //add event handlers wheb animation ends
             switch(this.onAnimationEnd_){
                 case "removeElementOnAnimationEnd":
                     cssElement.addEventListener('animationend', () => {

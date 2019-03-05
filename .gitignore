@@ -1,6 +1,8 @@
 test/
-test/javasource/
 test/deployment/
+test/javasource/javascriptsource
+test/javasource/
+test/javasource/resources
 test/.classpath
 test/.project
 test/userlib/

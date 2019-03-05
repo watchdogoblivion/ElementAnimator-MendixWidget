@@ -36,8 +36,8 @@ define([
         fadeOut_: null,
         fadeOutDelay_: null,
         loopCount_: null,
-        cursorChar_: null,
-        showCursor_: null, 
+        //cursorChar_: null,
+        //showCursor_: null, 
 
         //Button Controls
         buttonToggle_: null,
@@ -68,8 +68,8 @@ define([
         fadeOutAttr_: null,
         fadeOutDelayAttr_: null,
         loopCountAttr_: null,
-        cursorCharAttr_: null,
-        showCursorAttr_: null,
+        // cursorCharAttr_: null,
+        // showCursorAttr_: null,
         
         // Internal variables.
         _handles: null,
@@ -98,6 +98,7 @@ define([
             
             this._contextObj = obj;
 
+            //suscribe to object changes and update typing object fields
             this.subscription();
 
             //set any dynamic attributes
@@ -115,6 +116,7 @@ define([
                 this.typedFunction();
             }
 
+            //adds custom button controls for typing object
             this.setButtonControls();
 
             this._updateRendering(callback);
@@ -135,9 +137,9 @@ define([
                         this._typed.shuffle = false,
                         this._typed.fadeOut = this.fadeOut_,
                         this._typed.fadeOutDelay = this.fadeOutDelay_,
-                        this._typed.loopCount = this.loopCount_,
-                        this._typed.cursorChar = this.cursorChar_,
-                        this._typed.showCursor = this.showCursor_
+                        this._typed.loopCount = this.loopCount_
+                        //this._typed.cursorChar = this.cursorChar_,
+                        //this._typed.showCursor = this.showCursor_
                     }  
                 }
             });
@@ -196,12 +198,12 @@ define([
             if(this.loopCountAttr_){
                 this.loopCount_ = this._contextObj.get(this.loopCountAttr_);
             }
-            if(this.cursorCharAttr_){
-                this.cursorChar_ = this._contextObj.get(this.cursorCharAttr_);
-            }
-            if(this.showCursorAttr_){
-                this.showCursor_ = this._contextObj.get(this.showCursorAttr_);
-            }
+            // if(this.cursorCharAttr_){
+            //     this.cursorChar_ = this._contextObj.get(this.cursorCharAttr_);
+            // }
+            // if(this.showCursorAttr_){
+            //     this.showCursor_ = this._contextObj.get(this.showCursorAttr_);
+            // }
             if(this._dynamicArray){
                 this._staticArray = this._dynamicArray;
             }
@@ -245,8 +247,8 @@ define([
                 fadeOut: this.fadeOut_,
                 fadeOutDelay: this.fadeOutDelay_,
                 loopCount: this.loopCount_,
-                cursorChar: this.cursorChar_,
-                showCursor: this.showCursor_,
+                cursorChar: "|",
+                showCursor: false,
                 onComplete: () => {
 
                     if(this.microflowOnComplete_){
@@ -314,9 +316,11 @@ define([
                 var elem = document.getElementsByClassName(this.typedQuery_)[0];
                 elem.style.display = "inline";
                 this._typed = new typedJs(elem, options);
+                this._typed.toggleBlinking(true);
             } else {
                 this._typed = new typedJs(this._typedElement, options);
             }
+
 
             console.log("Typed Object created")
         },
@@ -328,8 +332,8 @@ define([
                 str += " " + this._staticArray[key];
             }
 
-            //checks if there is a designated element on the page for holding typed object
-            if(this.typedQuery_){
+             //checks if there is a designated element on the page for holding text
+             if(this.typedQuery_){
                 var elem = document.getElementsByClassName(this.typedQuery_)[0];
                 elem.innerText = str;
             } else {

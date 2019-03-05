@@ -8,11 +8,6 @@
     <properties>
 
         <!-- Typed Static Category-->
-        <property key="typedQuery_" type="string" required="false">
-            <caption>Typed Query</caption>
-            <category>Typed Static</category>
-            <description>Css class selector. Use select element you wish to be typed. ex: class</description>
-        </property>
         <property key="enabled_" type="boolean" defaultValue="false" required="true">
             <caption>Enabled/Disabled</caption>
             <category>Typed Static</category>
@@ -65,16 +60,16 @@
             <category>Typed Static</category>
             <description>Amount of loops</description>
         </property>
-        <property key="cursorChar_" type="string" required="false">
+        <!-- <property key="cursorChar_" type="string" required="false">
             <caption>Cursor Character</caption>
             <category>Typed Static</category>
             <description>Character for cursor</description>
-        </property>
-        <property key="showCursor_" type="boolean" defaultValue="false" required="true">
+        </property> -->
+        <!-- <property key="showCursor_" type="boolean" defaultValue="false" required="true">
             <caption>Show Cursor</caption>
             <category>Typed Static</category>
             <description>Show Cursor</description>
-        </property>
+        </property> -->
 
          <!-- Typed Dynamic Category -->
         <property key="tagAttr_" type="attribute" required="false">
@@ -165,28 +160,33 @@
                 <attributeType name="Integer" />
             </attributeTypes>
         </property>
-        <property key="cursorCharAttr_" type="attribute" required="false">
+        <!-- <property key="cursorCharAttr_" type="attribute" required="false">
             <caption>Cursor Character Override</caption>
             <category>Typed Dynamic</category>
             <description>Character for cursor</description>
             <attributeTypes>
                 <attributeType name="String" />
             </attributeTypes>
-        </property>
-        <property key="showCursorAttr_" type="attribute" required="false">
+        </property> -->
+        <!-- <property key="showCursorAttr_" type="attribute" required="false">
             <caption>Show Cursor Override</caption>
             <category>Typed Dynamic</category>
             <description>Show Cursor</description>
             <attributeTypes>
                 <attributeType name="Boolean" />
             </attributeTypes>
-        </property>
+        </property> -->
 
-        <!-- Controls -->
+        <!-- Custom Controls -->
+        <property key="typedQuery_" type="string" required="false">
+            <caption>Typed Query</caption>
+            <category>Custom Controls</category>
+            <description>Css class selector. Use to select element you wish to be typed. ex: elem</description>
+        </property>
         <property key="buttonCreateTyped_" type="string" required="false">
             <caption>Button Initiate typed</caption>
             <category>Custom Controls</category>
-            <description>When a button is clicked, create typed object. This field is the button class.</description>
+            <description>Css class selector. Use to select button, that when clicked, creates the typed object ex: button</description>
         </property>
         <property key="buttonToggle_" type="string" required="false">
             <caption>Button Toggle</caption>

@@ -34,8 +34,8 @@ define([
         fadeOut_: null,
         fadeOutDelay_: null,
         loopCount_: null,
-        cursorChar_: null,
-        showCursor_: null,
+        //cursorChar_: null,
+        //showCursor_: null,
 
         //Button Controls
         buttonToggle_: null,
@@ -58,7 +58,7 @@ define([
         _handles: null,
         _contextObj: null,
         _typed: null,
-        _element: null,
+        _typedElement: null,
         _staticArray: null,
         _defaultTag: "p",
         _staticClass: "static-styles",
@@ -79,7 +79,7 @@ define([
             
             this._contextObj = obj;
 
-            //set any dynamic attributes
+            //Convert static texts to an array
             this.initializeArray();
             
             //set a button to create a typed object on click 
@@ -94,6 +94,7 @@ define([
                 this.typedFunction();
             }
 
+            //set custom controls for typed object
             this.setButtonControls();
   
             this._updateRendering(callback);
@@ -119,15 +120,15 @@ define([
         typedFunction: function(){
 
             //creates a default element for holding typed object for the widget even if the user specifies another element
-            if(!this._element){
-                this._element = document.createElement(this._defaultTag);
+            if(!this._typedElement){
+                this._typedElement = document.createElement(this._defaultTag);
                 //each created widget will have this class
-                this._element.classList.add(this._staticClass);
-                this._element.style.display = "inline";
-                document.getElementById(this.id).parentElement.appendChild(this._element);
+                this._typedElement.classList.add(this._staticClass);
+                this._typedElement.style.display = "inline";
+                document.getElementById(this.id).parentElement.appendChild(this._typedElement);
             }
 
-            //used to keep track of all existng widgets, an array of all the _element objects for each widget
+            //used to keep track of all existng widgets, an array of all the _typedElement objects for each widget
             var elements = document.getElementsByClassName(this._staticClass);
             if(this._typed){
                 this._typed.destroy();
@@ -155,8 +156,8 @@ define([
                 fadeOut: this.fadeOut_,
                 fadeOutDelay: this.fadeOutDelay_,
                 loopCount: this.loopCount_,
-                cursorChar: this.cursorChar_,
-                showCursor: this.showCursor_,
+                cursorChar: "|",
+                showCursor: false,
                 onComplete: () => {
                     
                     if(this.microflowOnComplete_){
@@ -218,32 +219,30 @@ define([
                     }
                 },
             };
-
+            
             //checks if there is a designated element on the page for holding typed object
             if(this.typedQuery_){
                 var elem = document.getElementsByClassName(this.typedQuery_)[0];
                 elem.style.display = "inline";
                 this._typed = new typedJs(elem, options);
-                console.log("111111111111111111111111")
             } else {
-                console.log("222222222222222222")
-                this._typed = new typedJs(this._element, options);
+                this._typed = new typedJs(this._typedElement, options);
             }
+            
         },
 
         setText: function(){
-            console.log("nooooooooooo 222" + this._staticArray)
             var str = "";
             for(var key in this._staticArray) {
                 str += " " + this._staticArray[key];
             }
 
-            //checks if there is a designated element on the page for holding typed object
-            if(this.typedQuery_){
+             //checks if there is a designated element on the page for holding text
+             if(this.typedQuery_){
                 var elem = document.getElementsByClassName(this.typedQuery_)[0];
                 elem.innerText = str;
             } else {
-                this._element.innerText = str;
+                this._typedElement.innerText = str;
             }
             
         },
