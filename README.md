@@ -6,7 +6,7 @@ Adds animations to elements and texts.
 
 * CSSAnimator : Adds a wide variety of animations to any element on the page.
 * TypingAnimator : Take a string and make it type with the configurations you set.
-* TypingAnimatorNoContext : Performs same functionality as TypingAnimator without enity context.
+* TypingAnimatorNoContext : Performs same functionality as TypingAnimator without entity context.
 
 ## Dependencies
 
@@ -16,7 +16,7 @@ Mendix 7.22
 
 * Add animations to any element on the page
 * Adjust the animation delay, the animation duration, and the animation iteration
-* Configure if element dissapears when the animation ends
+* Configure whether or not the element dissapears when the animation ends
 * Trigger a microflow when the animation ends
 
 ## Sample
