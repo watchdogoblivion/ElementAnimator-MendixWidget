@@ -13,7 +13,7 @@ test/.project
 *.lock
 .idea/
 
-dist/
+
 
 node_modules/
 .editorconfig
